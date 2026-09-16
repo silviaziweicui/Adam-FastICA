@@ -1,8 +1,13 @@
 # Adam-FastICA
 
-Adam-FastICA is a high-density surface electromyography (HD-sEMG) decomposition algorithm that integrates the FastICA framework with the Adam optimization strategy to improve the convergence efficiency and stability of motor unit (MU) decomposition.
+Adam-FastICA is an adaptive decomposition scheme for extracting motor unit (MU) discharge patterns from surface electromyography (sEMG) signals. The method integrates the FastICA framework with adaptive moment estimation (Adam) to improve computational efficiency during offline decomposition and incorporates dynamic parameter updating for online decomposition of non-stationary sEMG signals.
 
-This repository provides the reference MATLAB implementation used in the corresponding research work, including both offline decomposition and online adaptive decomposition.
+The method consists of two complementary stages:
+
+* **Offline decomposition:** Adam-FastICA adaptively estimates the separation vectors and spike-extraction thresholds from the training sEMG signals.
+* **Online decomposition:** A dynamic parameter updating strategy adjusts the estimated decomposition parameters in real time, enabling the method to track changes in non-stationary sEMG signals and reconstruct MU spike trains (MUSTs).
+
+The repository provides the reference MATLAB implementation used in the corresponding publication, including both offline decomposition and online adaptive decomposition.
 
 > **Note**
 >
