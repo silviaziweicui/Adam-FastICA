@@ -1,38 +1,37 @@
 # Adam-FastICA
 
-> **Notice**
-> This repository is released to facilitate the peer-review process. It contains the implementation used in the submitted manuscript. The documentation and examples may be further refined after the peer-review process.
+Adam-FastICA is a high-density surface electromyography (HD-sEMG) decomposition algorithm that integrates the FastICA framework with the Adam optimization strategy to improve the convergence efficiency and stability of motor unit (MU) decomposition.
 
-## Overview
+This repository provides the reference MATLAB implementation used in the corresponding research work, including both offline decomposition and online adaptive decomposition.
 
-Adam-FastICA is a high-density surface electromyography (HD-sEMG) decomposition algorithm that integrates the FastICA framework with the Adam optimization strategy to improve the convergence speed and stability of motor unit (MU) decomposition.
-
-The repository provides the reference MATLAB implementation used in the submitted manuscript, including both offline decomposition and online adaptive decomposition.
+> **Note**
+>
+> This repository was originally prepared for the peer-review process and has been made publicly available following acceptance of the corresponding manuscript. The code and documentation may be further updated to improve clarity, usability, and reproducibility.
 
 ## Requirements
 
-- MATLAB R2018b or later
-- Signal Processing Toolbox
-- Statistics and Machine Learning Toolbox
+* MATLAB R2018b or later
+* Signal Processing Toolbox
+* Statistics and Machine Learning Toolbox
 
 ## Input Data Format
 
 The input HD-sEMG signal should be organized as
 
-```
+```text
 channels × samples
 ```
 
-For example,
+For example:
 
 ```matlab
 data = randn(64, 120000);
 ```
 
-where
+where:
 
-- rows correspond to recording channels;
-- columns correspond to time samples.
+* rows correspond to recording channels;
+* columns correspond to time samples.
 
 ## Quick Start
 
@@ -44,9 +43,9 @@ Load your HD-sEMG recording into MATLAB.
 load('your_data.mat');
 ```
 
-The training and testing datasets should be stored as matrices with dimensions
+The training and testing datasets should be stored as matrices with dimensions:
 
-```
+```text
 channels × samples
 ```
 
@@ -92,25 +91,31 @@ niter = 200;
 
 ## Notes
 
-- Additional examples and documentation may be added in future updates.
-- The implementation is intended for academic research and reproducibility.
+* The implementation is provided for academic research and reproducibility.
+* The offline stage is used to estimate the decomposition parameters from the training data.
+* The online stage uses the estimated parameters for adaptive decomposition of subsequent HD-sEMG signals.
+* Additional examples and documentation may be added in future updates.
 
+## Related Publication
 
-## Related Manuscript
+This repository accompanies the following publication:
 
-This repository accompanies the implementation described in the following manuscript, which is currently under peer review.
+> **Real-time Motor Unit Tracking: Fast and Adaptive Decomposition of Non-Stationary Surface Electromyographic Signals**
 
-> Title **Real-time Motor Unit Tracking: Fast and Adaptive Decomposition of Non-Stationary Surface Electromyographic Signals**
-
-The manuscript information will be updated after publication.
-
+The manuscript has been **accepted for publication**. Full publication information, including the journal, volume, issue, page numbers, and DOI, will be added to this section once available.
 
 ## Citation
 
-If you find this repository useful in your research, please consider citing the corresponding publication after it becomes available.
+If you use Adam-FastICA or the code provided in this repository in your research, please cite the corresponding publication:
 
-BibTeX information will be added after the manuscript is accepted.
+```text
+Cui, Z., et al.
+"Real-time Motor Unit Tracking: Fast and Adaptive Decomposition of
+Non-Stationary Surface Electromyographic Signals."
+[Forthcoming publication]
+```
 
+The complete citation and BibTeX entry will be updated once the final publication information is available.
 
 ## References
 
@@ -120,11 +125,9 @@ BibTeX information will be added after the manuscript is accepted.
 
 3. Negro, F., Muceli, S., Castronovo, A. M., Holobar, A., & Farina, D. (2016). Multi-channel intramuscular and surface EMG decomposition by convolution kernel compensation. *IEEE Transactions on Biomedical Engineering*, 63(7), 1493–1504.
 
-
 ## License
 
 This repository is provided for academic and non-commercial research purposes.
-
 
 ## Contact
 
