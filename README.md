@@ -114,9 +114,8 @@ The manuscript has been **accepted for publication**. Full publication informati
 If you use Adam-FastICA or the code provided in this repository in your research, please cite the corresponding publication:
 
 ```text
-Cui, Z., et al.
-"Real-time Motor Unit Tracking: Fast and Adaptive Decomposition of
-Non-Stationary Surface Electromyographic Signals."
+Z. Cui, C. Lin, M. Zhou, et al.
+"Real-time Motor Unit Tracking: Fast and Adaptive Decomposition of Non-Stationary Surface Electromyographic Signals."
 [Forthcoming publication]
 ```
 
